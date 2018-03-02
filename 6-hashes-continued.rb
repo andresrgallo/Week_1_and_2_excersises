@@ -32,3 +32,10 @@ menu = {
 
 # 3. Report
 puts "  Report  ".center(40,"-")
+puts "  Sales today   ". center(40,"-")
+puts "".center(40,"-")
+menu.each do |k,v|
+  
+  puts "#{k} Total sold = #{v[:price] * v[:sold_today]}  total profit = #{v[:profit_per_sale]*v[:sold_today]}"
+  
+end
