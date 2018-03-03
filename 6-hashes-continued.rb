@@ -35,7 +35,10 @@ puts "  Report  ".center(40,"-")
 puts "  Sales today   ". center(40,"-")
 puts "".center(40,"-")
 menu.each do |k,v|
-  
-  puts "#{k} Total sold = #{v[:price] * v[:sold_today]}  total profit = #{v[:profit_per_sale]*v[:sold_today]}"
-  
+  puts "* #{k}  --- Ttl sold today = $#{v[:price] * v[:sold_today]} --- Ttl profit for today = $#{v[:profit_per_sale]*v[:sold_today]}"
+end
+# or
+puts "--- Product --           Ttl sold today      Ttl profit for today"
+menu.each do |k,v|
+  puts "* #{k}                $#{v[:price] * v[:sold_today]}         $#{v[:profit_per_sale]*v[:sold_today]}"
 end
